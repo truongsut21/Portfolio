@@ -51,7 +51,30 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+}
 
-  /* font size for large divices  */
+/* font size for large divices  */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* base  */
+/* scroll-behavior: smooth; lam muot khi chuyen trang  */
+html{
+  /* scroll-behavior: smooth; lam muot khi chuyen trang  */
+  scroll-behavior: smooth;
+}
+
+body{
+  
+  margin: 0 0 var(--header-height) 0;
   
 }
