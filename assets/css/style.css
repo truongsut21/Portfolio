@@ -8,15 +8,15 @@
 
   /* color mod  */
   --hue-color: 250;
-  --fist-color: hls(var(--hue-color), 69%, 61%);
-  --fist-color-second: hls(var(--hue-color), 69%, 61%);
-  --fist-color-alt: hls(var(--hue-color), 57%, 53%);
-  --fist-color-lighter: hls(var(--hue-color), 98%, 85%);
-  --title-color: hls(var(--hue-color), 8%, 15%);
-  --text-color: hls(var(--hue-color), 69%, 61%);
-  --text-color-light: hls(var(--hue-color), 8%, 65%);
-  --input-color: hls(var(--hue-color), 70%, 96%);
-  --body-color: hls(var(--hue-color), 60%, 97%);
+  --fist-color: hsl(var(--hue-color), 69%, 61%);
+  --fist-color-second: hsl(var(--hue-color), 69%, 61%);
+  --fist-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --fist-color-lighter: hsl(var(--hue-color), 98%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 69%, 61%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 97%);
 
   --container-color: #fff;
 
@@ -67,6 +67,9 @@
 }
 
 /* base  */
+*,::before,::after{
+  box-sizing: border-box;
+}
 /* scroll-behavior: smooth; lam muot khi chuyen trang  */
 html{
   /* scroll-behavior: smooth; lam muot khi chuyen trang  */
@@ -75,11 +78,12 @@ html{
 
 body{
   /* top right bottom lfet  */
-  margin: 0 0 var(--header-height) 0;
+  margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  
 }
 
 /* set chieu cao va do rong cua chu  */
@@ -90,6 +94,8 @@ h1,h2,h3,h4 {
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -100,6 +106,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* -----------------TÁI SỬA DỤNG CSS---------------------  */
@@ -164,7 +171,87 @@ img {
 .nav_logo:hover{
   color: var(--fist-color);
 }
+
+/* set nav cho man hinh nho  */
+@media screen and (max-width: 768px) {
+  .nav_menu{
+    /* box-sizing: border-box; */
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgb(29, 29, 29);
+    border-radius:  1.5rem 1.5rem 0 0;
+    transition: .3s;
+  }
+}
+
+.nav_list{
+  /* set lưới 3 ô 1 hàng  */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.nav_link{
+  display: flex;
+
+  /* flex cac listItem theo cột  */
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav_link:hover{
+  color: var(--fist-color);
+}
+
+.nav_icon{
+  font-size: 1.2rem;
+}
+
+.nav_close{
+  position: absolute;
+  right: 1.3rem;
+  bottom: .5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--fist-color);
+}
+
+.nav_close:hover{
+  color: var(--fist-color-alt);
+}
+
+.nav_toggle{
+  position: absolute;
+  right: 3rem;
+  bottom: .3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--fist-color);
+}
+
+.nav_toggle:hover{
+  color: var(--fist-color-alt);
+}
+
+/* show menu  */
+.show-menu{
+  bottom: 0;
+}
+
+
+
+
+
+
+
+
 li{
-  background-color: rgb(247, 126, 192);
+  /* background-color: var(--fist-color-second); */
 }
 
