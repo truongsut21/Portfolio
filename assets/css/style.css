@@ -16,7 +16,7 @@
   --text-color: hls(var(--hue-color), 69%, 61%);
   --text-color-light: hls(var(--hue-color), 8%, 65%);
   --input-color: hls(var(--hue-color), 70%, 96%);
-  --body-color: hls(var(--hue-color), 60%, 99%);
+  --body-color: hls(var(--hue-color), 60%, 97%);
 
   --container-color: #fff;
 
@@ -74,7 +74,65 @@ html{
 }
 
 body{
-  
+  /* top right bottom lfet  */
   margin: 0 0 var(--header-height) 0;
-  
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
+
+/* set chieu cao va do rong cua chu  */
+h1,h2,h3,h4 {
+  color: var(--title-color);
+  /* cỡ chữ bán đậm  */
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -----------------TÁI SỬA DỤNG CSS---------------------  */
+.selection {
+  padding: 2rem 0 4rem;
+}
+
+.selection_title{
+  font-size: var(--h1-font-size);
+}
+
+.selection_subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.selection_title, .selection_subtitle {
+  text-align: center;
+}
+
+/* ------------------ LAYOUT -----------------------------  */
+.container{
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  
+  /* Khoảng trong giữa hàng và côt grid  */
+  gap: 1.5rem;
+}
+
+
