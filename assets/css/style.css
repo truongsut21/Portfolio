@@ -61,33 +61,37 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
+    --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
   }
 }
 
 /* base  */
-*,::before,::after{
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 /* scroll-behavior: smooth; lam muot khi chuyen trang  */
-html{
+html {
   /* scroll-behavior: smooth; lam muot khi chuyen trang  */
   scroll-behavior: smooth;
 }
 
-body{
+body {
   /* top right bottom lfet  */
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  
 }
 
 /* set chieu cao va do rong cua chu  */
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   /* cỡ chữ bán đậm  */
   font-weight: var(--font-semi-bold);
@@ -114,7 +118,7 @@ img {
   padding: 2rem 0 4rem;
 }
 
-.selection_title{
+.selection_title {
   font-size: var(--h1-font-size);
 }
 
@@ -124,12 +128,13 @@ img {
   margin-bottom: var(--mb-3);
 }
 
-.selection_title, .selection_subtitle {
+.selection_title,
+.selection_subtitle {
   text-align: center;
 }
 
 /* ------------------ LAYOUT -----------------------------  */
-.container{
+.container {
   max-width: 768px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
@@ -137,64 +142,64 @@ img {
 
 .grid {
   display: grid;
-  
+
   /* Khoảng trong giữa hàng và côt grid  */
   gap: 1.5rem;
 }
 
-.header{
+.header {
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
-  
-
 }
 
-.nav{
+.nav {
   max-width: 968px;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* background-color: steelblue; */
-
 }
 
-.nav_logo, .nav_toggle{
+.nav_logo,
+.nav_toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
 
-.nav_logo:hover{
+.nav_logo:hover {
   color: var(--fist-color);
 }
 
 /* set nav cho man hinh nho  */
 @media screen and (max-width: 768px) {
-  .nav_menu{
+  .nav_menu {
     /* box-sizing: border-box; */
     position: fixed;
-    bottom: -100%;
+    bottom: -110%;
     left: 0;
     width: 100%;
     background-color: var(--body-color);
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgb(29, 29, 29);
-    border-radius:  1.5rem 1.5rem 0 0;
-    transition: .3s;
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
   }
 }
 
-.nav_list{
+.nav_list {
   /* set lưới 3 ô 1 hàng  */
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+
+  padding-bottom: var(--mb-1-5);
 }
 
-.nav_link{
+.nav_link {
   display: flex;
 
   /* flex cac listItem theo cột  */
@@ -205,53 +210,85 @@ img {
   font-weight: var(--font-medium);
 }
 
-.nav_link:hover{
+.nav_link:hover {
   color: var(--fist-color);
 }
 
-.nav_icon{
+.nav_icon {
   font-size: 1.2rem;
 }
 
-.nav_close{
+.nav_close {
   position: absolute;
   right: 1.3rem;
-  bottom: .5rem;
+  bottom: 0.5rem;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--fist-color);
 }
 
-.nav_close:hover{
+.nav_close:hover {
   color: var(--fist-color-alt);
 }
 
-.nav_toggle{
+.nav_toggle {
   position: absolute;
   right: 3rem;
-  bottom: .3rem;
+  bottom: 0.3rem;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--fist-color);
 }
 
-.nav_toggle:hover{
+.nav_toggle:hover {
   color: var(--fist-color-alt);
 }
 
 /* show menu  */
-.show-menu{
-  bottom: 0;
+.show-menu {
+  bottom: 0 !important;
+}
+
+.home_img img {
+  background-image: linear-gradient(rgb(215, 143, 233), rgb(36, 56, 94));
+  height: 200px;
+  border-radius: 55% 45% 52% 48% / 50% 17% 83% 50%;
 }
 
 
-
-
-
-
-
-
-li{
-  /* background-color: var(--fist-color-second); */
+/* ============================= HOME =====================  */
+.home_container{
+  gap: 1rem;
 }
+
+.home_content {
+  /* chia ra 2 cột .5 và 3 */
+  grid-template-columns: .5fr 3fr;
+  padding-top: 3.5rem;
+  align-items: center;
+}
+
+.home_social{
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+  
+}
+
+.home_social-icon{
+  font-size: 1.25rem;
+  color: var(--fist-color);
+}
+
+.home_social-icon:hover{
+  color: var(--fist-color-alt);
+  font-size: 1.4rem;
+  transition: 0.05s;
+}
+
+.home_data{
+  background-color: var(--fist-color-alt);
+  grid-column: 1/3;
+}
+
 
