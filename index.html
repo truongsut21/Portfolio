@@ -26,7 +26,7 @@
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav_logo"> TRX</a>
-        <div class="nav_menu show-menu" id="nav-menu">
+        <div class="nav_menu" id="nav-menu">
           <ul class="nav_list grid">
             <li class="nav_item">
               <a href="#home" class="nav_link">
@@ -66,10 +66,9 @@
           </ul>
           <!-- nut close  -->
           <i class="fas fa-times nav-times nav_close" id="nav-close"></i>
-
-          <div class="nav_toggle" id="nav-toggle">
-            <i class="fas fa-align-justify"></i>
-          </div>
+        </div>
+        <div class="nav_toggle show-menu" id="nav-toggle">
+          <i class="fas fa-align-justify"></i>
         </div>
       </nav>
     </header>
@@ -80,20 +79,31 @@
         <div class="home_container container grid">
           <div class="home_content grid">
             <div class="home_social">
+              <a href="#" class="home_social-icon">
+                <img
+                  src="./assets/img/icon/git.png"
+                  alt=""
+                  class="home_social-icon"
+                />
+              </a>
               <a
                 href="https://www.facebook.com/profile.php?id=100039627481937"
                 class="home_social-icon"
                 target="_blank"
               >
-                <i class="fab fa-facebook"></i>
+                <img
+                  src="./assets/img/icon/face.png"
+                  alt=""
+                  class="home_social-icon"
+                />
               </a>
 
               <a href="#" class="home_social-icon">
-                <i class="fas fa-cookie"></i>
-              </a>
-
-              <a href="#" class="home_social-icon">
-                <i class="fab fa-github"></i>
+                <img
+                  src="./assets/img/icon/ins.png"
+                  alt=""
+                  class="home_social-icon"
+                />
               </a>
             </div>
 
@@ -129,12 +139,43 @@
 
       <!-- ------------------------ ABOUT ----------------------  -->
       <section class="about section" id="about">
-        <h2 class="section_title">
-          About Me
-        </h2>
-        <span class="section_subtitle">
-          My introduction
-        </span>
+        <h2 class="section_title">About Me</h2>
+        <span class="section_subtitle"> My introduction </span>
+
+        <div class="about_container container grid">
+          <img src="./assets/img/abouImg.png" alt="" class="about_img" />
+          <p class="about_description">
+            Web developer, with extensive knowledge and year of experience,
+            working in web technologies and UI / UX design, delivering quality
+            world !
+          </p>
+
+          <div class="about_info">
+            <div>
+              <span class="about_info-title">08+</span>
+              <span class="about_info-name"
+                >Year <br />
+                experience</span
+              >
+            </div>
+
+            <div>
+              <span class="about_info-title">20+</span>
+              <span class="about_info-name"
+                >Completed <br />
+                project</span
+              >
+            </div>
+
+            <div>
+              <span class="about_info-title">08+</span>
+              <span class="about_info-name"
+                >Year <br />
+                experience</span
+              >
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 

@@ -8,6 +8,10 @@ navClose = document.getElementById("nav-close");
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
+    iconToggle = document.getElementById("nav-toggle");
+
+    // hiden
+    iconToggle.classList.add("hiden-icon-toggle");
   });
 }
 
@@ -15,6 +19,11 @@ if (navToggle) {
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
+    iconToggle = document.getElementById("nav-toggle");
+
+    // hiden
+    iconToggle.classList.remove("hiden-icon-toggle");
+    iconToggle.classList.add("show-menu");
   });
 }
 
@@ -30,7 +39,7 @@ function linkAction() {
 }
 
 // them cac event vào navLink
-navLink.forEach((n) => n.addEventListener("click", linkAction));
+// navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 // ========================= SCROLL SECTION ACTIVE LINK ======================
 const section = document.querySelectorAll("section[id]");
