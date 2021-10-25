@@ -12,8 +12,8 @@
   --fist-color-second: hsl(var(--hue-color), 69%, 61%);
   --fist-color-alt: hsl(var(--hue-color), 57%, 53%);
   --fist-color-lighter: hsl(var(--hue-color), 98%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 69%, 61%);
+  --title-color: hsl(var(--hue-color), 60%, 15%);
+  --text-color: hsl(var(--hue-color), 69%, 20%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 97%);
@@ -290,13 +290,13 @@ img {
 .home_social-icon{
   height: 2rem;
   color: var(--fist-color);
-
+  transition: .3s;
 }
 
 .home_social-icon:hover{
   color: var(--fist-color-alt);
   font-size: 1.4rem;
-  transition: 0.05s;
+  transform: translateY(-0.1rem);
 }
 
 .home_data{
@@ -367,6 +367,11 @@ margin-bottom: var(--mb-0-75);
   background-image: linear-gradient(rgb(206, 160, 235), var(--fist-color));
   color: rgb(254, 254, 255);
   
+  
+}
+
+.button:hover{
+  transform: translateY(-0.2rem);
 }
 
 .button_icon{
@@ -379,4 +384,51 @@ margin-bottom: var(--mb-0-75);
   display: inline-block;
   align-items: center;
 }
+
+.about_img{
+  width: 300px;
+  border-radius: .5rem;
+
+  /* căn hình ở giữa  */
+  justify-self: center;
+  align-self: center;
+
+}
+
+.about_description{
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+}
+
+.about_info{
+  display: flex;
+  /* căn đều giữa cac title  */
+  justify-content: space-evenly;
+
+  margin-bottom: var(--mb-2-5);
+}
+
+.about_info-title{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--text-color);
+}
+.about_info-name{
+  font-size: var(--smaller-font-size);
+}
+
+.about_info-title,
+.about_info-name{
+  /* khóa display   */
+  display: block;
+
+  text-align: center;
+}
+
+.about_button{
+  display: flex;
+  justify-content: center;
+  border-radius: 55% 45% 30% 70% / 43% 50% 50% 57% ;
+}
+
 
