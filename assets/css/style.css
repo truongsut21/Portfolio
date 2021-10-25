@@ -115,11 +115,12 @@ img {
 
 /* -----------------TÁI SỬA DỤNG CSS---------------------  */
 .selection {
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 2rem;
 }
 
 .section_title {
   font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-0-25);
 }
 
 .section_subtitle {
@@ -156,7 +157,10 @@ img {
   z-index: var(--z-fixed);
   background-color: var(--body-color);
   box-shadow: 0 -1px 4px rgb(29, 29, 29);
+  border-radius: 1.5rem 1.5rem 0 0;
 }
+
+
 
 .nav {
   max-width: 968px;
@@ -429,6 +433,54 @@ margin-bottom: var(--mb-0-75);
   display: flex;
   justify-content: center;
   border-radius: 55% 45% 30% 70% / 43% 50% 50% 57% ;
+}
+
+/* ============================ SKILLS =======================  */
+.skills_container{
+  row-gap: 0;
+}
+.skills_header{
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+
+.skills_icon,
+.skills_arrow{
+  font-size: 2rem;
+  color: var(--fist-color);
+}
+
+.skills_icon{
+  margin-right: var(--mb-0-75);
+}
+
+.skills_title{
+  font-size: var(--h3-font-size);
+
+}
+
+.skills_subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.skills_arrow{
+  margin-left: auto;
+  transition: .4s;
+}
+
+.skills_titles{
+  display: flex;
+
+  /* dàn đều items  */
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+}
+
+.skills_name{
+  
 }
 
 
