@@ -47,10 +47,12 @@ const section = document.querySelectorAll("section[id]");
 
 // =============================== ACCORDION SKILLS =====================
 const skillsContent = document.getElementsByClassName("skills_content");
+console.log("🚀 ~ file: main.js ~ line 50 ~ skillsContent", skillsContent)
 
 function toggleSkills() {
   
   // lấy thẻ div hiện tại vừa ckick vào 
+  // this = skillsHeader
   let itemClass = this.parentNode.className;
   console.log("🚀 ~ file: main.js ~ line 55 ~ toggleSkills ~ this.parentNode", this.parentNode)
   console.log("🚀 ~ file: main.js ~ line 52 ~ toggleSkills ~ itemClass", itemClass)
@@ -65,6 +67,7 @@ function toggleSkills() {
 }
 
 const skillsHeader = document.querySelectorAll(".skills_header");
+
 skillsHeader.forEach(function (el) {
   el.addEventListener("click", toggleSkills);
 });
