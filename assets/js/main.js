@@ -46,10 +46,8 @@ const section = document.querySelectorAll("section[id]");
 
 // =============================== ACCORDION SKILLS =====================
 const skillsContent = document.getElementsByClassName("skills_content");
-// console.log("🚀 ~ file: main.js ~ line 49 ~ skillsContent", skillsContent)
-
 const skillsHeader = document.querySelectorAll(".skills_header");
-// console.log("🚀 ~ file: main.js ~ line 50 ~ skillsHeader", skillsHeader)
+
 
 function toggleSkills() {
   let itemClass = this.parentNode.className;
@@ -70,6 +68,5 @@ function toggleSkills() {
 }
 
 skillsHeader.forEach(function (el) {
-  console.log("🚀 ~ file: main.js ~ line 67 ~ skillsHeader.forEach ~ el", el);
   el.addEventListener("click", toggleSkills);
 });

@@ -546,6 +546,7 @@ margin-bottom: var(--mb-0-75);
 }
 
 .skills_close .skills_list{
+  transition: .5s;
   height: 0;
 
   /* Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi. */
