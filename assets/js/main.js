@@ -43,3 +43,33 @@ function linkAction() {
 
 // ========================= SCROLL SECTION ACTIVE LINK ======================
 const section = document.querySelectorAll("section[id]");
+
+// =============================== ACCORDION SKILLS =====================
+const skillsContent = document.getElementsByClassName("skills_content");
+// console.log("🚀 ~ file: main.js ~ line 49 ~ skillsContent", skillsContent)
+
+const skillsHeader = document.querySelectorAll(".skills_header");
+// console.log("🚀 ~ file: main.js ~ line 50 ~ skillsHeader", skillsHeader)
+
+function toggleSkills() {
+  let itemClass = this.parentNode.className;
+  console.log(
+    "🚀 ~ file: main.js ~ line 56 ~ toggleSkills ~ itemClass",
+    itemClass
+  );
+
+  for (i = 0; i < skillsContent.length; i++) {
+    skillsContent[i].className = "skills_content skills_close";
+  }
+
+  if (itemClass === "skills_content skills_close") {
+    this.parentNode.className = "skills_content skills_open";
+  }
+
+  
+}
+
+skillsHeader.forEach(function (el) {
+  console.log("🚀 ~ file: main.js ~ line 67 ~ skillsHeader.forEach ~ el", el);
+  el.addEventListener("click", toggleSkills);
+});

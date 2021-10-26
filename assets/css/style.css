@@ -480,8 +480,92 @@ margin-bottom: var(--mb-0-75);
 }
 
 .skills_name{
-  
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium)
 }
+
+.skills_bar,
+.skills_percentage{
+  height: 5px;
+  border-radius: .25rem;
+
+}
+
+.skills_bar{
+  background-color: var(--fist-color-lighter);
+}
+
+.skills_percentage{
+  display: block;
+  background-color: var(--fist-color);
+
+}
+/* ------------- BAR SKILL -------------------------------  */
+.skills_html{
+  width: 90%;
+}
+
+.skills_css{
+  width: 90%;
+}
+
+.skills_js{
+  width: 90%;
+}
+
+.skills_ang{
+  width: 90%;
+}
+
+.skills_php{
+  width: 90%;
+}
+
+.skills_node{
+  width: 90%;
+}
+
+.skills_sql{
+  width: 90%;
+}
+
+.skills_py{
+  width: 90%;
+}
+
+.skills_figma{
+  width: 90%;
+}
+
+.skills_sketch{
+  width: 90%;
+}
+
+.skills_pts{
+  width: 90%;
+}
+
+.skills_close .skills_list{
+  height: 0;
+
+  /* Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi. */
+  overflow: hidden;
+}
+
+.skills_open .skills_list {
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+}
+
+.skills_open .skills_arrow{
+  transition: .3s;
+  transform: rotate(-180deg);
+}
+
+
+
+  
+
 
 /* 2:35  */
 
