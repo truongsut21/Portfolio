@@ -563,13 +563,44 @@ margin-bottom: var(--mb-0-75);
   transform: rotate(-180deg);
 }
 
+/* ================================= QUALIFICATION =======================  */
+.qualification_tabs {
+  display: flex;
 
+  /* dàn dều giữa */
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2);
+}
 
+.qualification_button{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+
+.qualification_button:hover{
+  color: var(--fist-color-alt);
+}
+
+.qualification_icon{
+  font-size: 1.8rem;
+  margin-right: var(--mb-0-25);
+}
+
+.qualification_data{
+  display: grid;
+
+  /* min-content : lấy độ dài chữ dài nhất 
+    max-content : dài ra hết mức có thẻ
+    fit-content : fit dộ dài vừa màn hình r xuống hàng
+  */
+  grid-template-columns: 1fr max-content 1fr;
+}
 
 
   
 
 
-/* 1:05  */
+/* 1:06  */
 
 
