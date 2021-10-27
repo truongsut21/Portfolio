@@ -74,4 +74,4 @@ skillsHeader.forEach(function (el) {
   el.addEventListener("click", toggleSkills);
 });
 
-// 1:02
+// 1:02 -
