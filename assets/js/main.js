@@ -31,7 +31,6 @@ if (navClose) {
 const navLink = document.querySelectorAll(".nav_link");
 
 function linkAction() {
-  
   const navMenu = document.getElementById("nav-menu");
   console.log(navMenu);
 
@@ -47,20 +46,23 @@ const section = document.querySelectorAll("section[id]");
 
 // =============================== ACCORDION SKILLS =====================
 const skillsContent = document.getElementsByClassName("skills_content");
-console.log("🚀 ~ file: main.js ~ line 50 ~ skillsContent", skillsContent)
 
 function toggleSkills() {
-  
-  // lấy thẻ div hiện tại vừa ckick vào 
+  // lấy thẻ div hiện tại vừa ckick vào
   // this = skillsHeader
-  let itemClass = this.parentNode.className;
-  console.log("🚀 ~ file: main.js ~ line 55 ~ toggleSkills ~ this.parentNode", this.parentNode)
-  console.log("🚀 ~ file: main.js ~ line 52 ~ toggleSkills ~ itemClass", itemClass)
 
+  // classs được chọn
+  let x = this.className;
+
+  // class cha được chọn
+  let itemClass = this.parentNode.className;
+
+  // close het tat  cac cac content
   for (i = 0; i < skillsContent.length; i++) {
     skillsContent[i].className = "skills_content skills_close";
   }
 
+  // mở content được chọn
   if (itemClass === "skills_content skills_close") {
     this.parentNode.className = "skills_content skills_open";
   }
@@ -72,4 +74,4 @@ skillsHeader.forEach(function (el) {
   el.addEventListener("click", toggleSkills);
 });
 
-// 59:03
+// 1:02
