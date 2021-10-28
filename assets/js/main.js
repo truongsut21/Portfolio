@@ -74,4 +74,42 @@ skillsHeader.forEach(function (el) {
   el.addEventListener("click", toggleSkills);
 });
 
-// 1:02 -
+// =============================== QUALIFICATION TABS ================= 
+const tabs = document.querySelectorAll('[data-target]')
+console.log("🚀 ~tabs", tabs)
+
+const tabContents = document.querySelectorAll('[data-content]')
+console.log("🚀 ~tabContents", tabContents)
+
+
+
+
+tabs.forEach(tab => {
+
+  
+  // them event vào tab
+  tab.addEventListener('click', () => {
+    // lấy target tên 'data-target' 
+    const target = document.querySelector(tab.dataset.target)
+  
+
+    console.log("🚀 ~tab.dataset.target", tab.dataset.target)
+
+    console.log("🚀~ tabContents", tabContents)
+    tabContents.forEach(tabContent => {
+      console.log("🚀~ tabContent", tabContent)
+      tabContent.classList.remove('qualification_active')
+    })
+    
+
+    target.classList.add('qualification_active')
+
+    tabs.forEach(tab => {
+      tab.classList.remove('qualification_active')
+    })
+    tab.classList.add('qualification_active')
+  })
+})
+
+
+// 1:12 -

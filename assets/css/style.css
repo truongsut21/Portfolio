@@ -636,11 +636,17 @@ margin-bottom: var(--mb-0-75);
 }
 
 .qualification [data-content] {
-  display: none;
+  display: none; 
+
 }
 
 .qualification_active[data-content]{
   display: block;
+  
+}
+
+.qualification_button.qualification_active{
+  color: var(--fist-color);
 }
 
 
