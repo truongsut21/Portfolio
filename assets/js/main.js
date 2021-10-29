@@ -74,40 +74,60 @@ skillsHeader.forEach(function (el) {
   el.addEventListener("click", toggleSkills);
 });
 
-// =============================== QUALIFICATION TABS ================= 
-const tabs = document.querySelectorAll('[data-target]')
-console.log("🚀 ~tabs", tabs)
+// =============================== QUALIFICATION TABS =================
+const tabs = document.querySelectorAll("[data-target]");
+console.log("🚀 ~tabs", tabs);
 
-const tabContents = document.querySelectorAll('[data-content]')
-console.log("🚀 ~tabContents", tabContents)
+const tabContents = document.querySelectorAll("[data-content]");
+console.log("🚀 ~tabContents", tabContents);
 
-
-
-
-tabs.forEach(tab => {
-
-  
+tabs.forEach((tab) => {
   // them event vào tab
-  tab.addEventListener('click', () => {
-    // lấy target tên 'data-target' 
-    const target = document.querySelector(tab.dataset.target)
-  
+  tab.addEventListener("click", () => {
+    // lấy target tên 'data-target'
+    const target = document.querySelector(tab.dataset.target);
 
-    console.log("🚀 ~tab.dataset.target", tab.dataset.target)
+    console.log("🚀 ~tab.dataset.target", tab.dataset.target);
 
-    console.log("🚀~ tabContents", tabContents)
-    tabContents.forEach(tabContent => {
-      console.log("🚀~ tabContent", tabContent)
-      tabContent.classList.remove('qualification_active')
-    })
-    
+    console.log("🚀~ tabContents", tabContents);
+    tabContents.forEach((tabContent) => {
+      console.log("🚀~ tabContent", tabContent);
+      tabContent.classList.remove("qualification_active");
+    });
 
-    target.classList.add('qualification_active')
+    target.classList.add("qualification_active");
 
-    tabs.forEach(tab => {
-      tab.classList.remove('qualification_active')
-    })
-    tab.classList.add('qualification_active')
+    tabs.forEach((tab) => {
+      tab.classList.remove("qualification_active");
+    });
+    tab.classList.add("qualification_active");
+  });
+});
+
+// ============================= SEVICES MODAL =========================== 
+const modalViews = document.querySelectorAll('.services_modal')
+const modalBtns = document.querySelectorAll('.services_button')
+const modalCloses = document.querySelectorAll('.services_modal-close')
+
+
+// nhận giá trị index từ dưới, thêm class active-modal
+// madalClick = index của cái nut đó
+
+let modal = function(modalClick){
+  console.log("modalClick 2")
+
+  modalViews[modalClick].classList.add('modal-active')
+  console.log("🚀~ modalViews[modalClick].classList", modalViews[modalClick].classList)
+}
+
+//  chạy qua các nút viewMore
+modalBtns.forEach((modalBtn, i) => {
+  console.log('modalBtn: ', modalBtn.classList)
+
+  // thêm event click vào nút viewMore qua index 
+  modalBtn.addEventListener('click', () => {
+    console.log("modalClick 1")
+    modal(i)
   })
 })
 
