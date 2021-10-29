@@ -116,8 +116,14 @@ const modalCloses = document.querySelectorAll('.services_modal-close')
 let modal = function(modalClick){
   console.log("modalClick 2")
 
+  
   modalViews[modalClick].classList.add('modal-active')
   console.log("🚀~ modalViews[modalClick].classList", modalViews[modalClick].classList)
+
+  // them event remove vào nut close modal
+  modalCloses[modalClick].addEventListener('click',() =>{
+    modalViews[modalClick].classList.remove('modal-active')
+  })
 }
 
 //  chạy qua các nút viewMore

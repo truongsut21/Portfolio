@@ -750,14 +750,17 @@ margin-bottom: var(--mb-0-75);
   border-radius: .5rem;
 }
 
-.services_modal-servies{
+.services_modal-services{
   row-gap: 1rem;
+}
+
+.services_modal-service{
   display: flex;
 }
 
 .services_modal-icon{
  padding-top: 1.25rem;
- padding: 1.25rem 1rem 0;
+ padding: 1.25rem 1rem 0 0;
 }
 
 .services_modal-title{
