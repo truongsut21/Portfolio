@@ -822,15 +822,11 @@ margin-bottom: var(--mb-0-75);
   transform: translateX(.25rem);
 }
 
-.swiper-button-next::after{
-  content: '';
-  background-color: saddlebrown;
+.swiper-button-next::after,
+.swiper-button-prev::after{
+  content: '' !important;
 }
 
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
-  content: '';
-  background-color: saddlebrown;
-}
 
 /* 1:26  */
 
