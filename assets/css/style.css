@@ -782,9 +782,55 @@ margin-bottom: var(--mb-0-75);
 .modal-active{
   opacity: 1;
   visibility: visible;
-
+}
+/* ======================= PROTFOLIO ====================== */
+.portfolio_container{
+  /* sửa dung giá trị mặc định  */
+  overflow: initial;
 }
 
+.protfolio_content{
+  padding: 0 1.5rem;
+}
+
+.portfolio_img{
+  width: 265px;
+  border-radius: .5rem;
+  /* justify-self - Căn chỉnh nội dung bên trong một mục lưới dọc theo trục hàng */
+  justify-self: center;
+}
+
+.portfolio_title{
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.portfolio_data{
+  justify-self: center;
+  /* background-color: rosybrown; */
+  margin-left: 1rem;
+}
+.portfolio_description{
+  margin-bottom: var(--mb-0-75);
+}
+
+.portfolio_button .button_icon{
+  border-radius: 21% 79% 87% 13% / 49% 46% 54% 51%  ;
+  padding-right: 0.5rem;
+}
+.portfolio_button:hover .button_icon{
+  transform: translateX(.25rem);
+}
+
+.swiper-button-next::after{
+  content: '';
+  background-color: saddlebrown;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: '';
+  background-color: saddlebrown;
+}
 
 /* 1:26  */
 
