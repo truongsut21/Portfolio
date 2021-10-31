@@ -851,6 +851,7 @@ img {
   border-left: 2px solid transparent;
   border-top:  solid transparent;
   box-shadow: 3px 8px 9px 0px rgb(29 29 29 / 30%); */
+  
 
 }
 
@@ -861,6 +862,11 @@ img {
 .contact_lable{
   text-decoration-line: underline;
 }
+
+.contact_button{
+  border-radius: .5rem;
+}
+
 
 
 /* 1:26  */
