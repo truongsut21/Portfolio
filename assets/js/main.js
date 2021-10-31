@@ -31,8 +31,13 @@ if (navClose) {
 const imgZalo = document.getElementById("zalo_close");
 const iconZalo = document.getElementById("iconZalo");
 const infoClose = document.getElementById("info_modal");
+const footer_zalo = document.getElementById("footer_zalo")
 // ------ show zalo -----------
 iconZalo.addEventListener("click", () => {
+  infoClose.classList.add("modal-active");
+});
+
+footer_zalo.addEventListener("click", () => {
   infoClose.classList.add("modal-active");
 });
 // ---------- hiden zalo -------------
