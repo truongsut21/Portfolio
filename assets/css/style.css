@@ -196,6 +196,7 @@ img {
     box-shadow: 0 -1px 4px rgb(29, 29, 29);
     border-radius: 1.5rem 1.5rem 0 0;
     transition: 0.3s;
+    color: var(--fist-color);
   }
 }
 
@@ -936,6 +937,29 @@ padding: 2rem 0 3rem;
 .footer_link,
 .footer_social{
   color: #fff;
+}
+
+/* ===================== scroll up =============== */
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--fist-color);
+  opacity: .8;
+  padding: .1rem .3rem;
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+}
+
+.scrollup_icon{
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* ---- show scroll up ------  */
+.scroll_show{
+  bottom: 5rem;
 }
 
 /* 1:26  */

@@ -168,3 +168,18 @@ let swiper = new Swiper(".mySwiper", {
   mousewheel: true,
   keyboard: true,
 });
+
+// ==================== show scroll up ================= 
+function scrollTop(){
+  const scrollTop = document.getElementById('scroll-top')
+
+  if(this.scrollY >= 560) {
+    scrollTop.classList.add('scroll_show');
+  }
+
+  else {
+    scrollTop.classList.remove('scroll_show')
+  }
+}
+
+window.addEventListener('scroll', scrollTop)
