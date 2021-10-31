@@ -27,6 +27,23 @@ if (navClose) {
   });
 }
 
+// =====================INFO ZALO =================
+const imgZalo = document.getElementById("zalo_close");
+const iconZalo = document.getElementById("iconZalo");
+const infoClose = document.getElementById("info_modal");
+const footer_zalo = document.getElementById("footer_zalo")
+// ------ show zalo -----------
+iconZalo.addEventListener("click", () => {
+  infoClose.classList.add("modal-active");
+});
+
+footer_zalo.addEventListener("click", () => {
+  infoClose.classList.add("modal-active");
+});
+// ---------- hiden zalo -------------
+imgZalo.addEventListener("click", () => {
+  infoClose.classList.remove("modal-active");
+});
 // ======================== REMOVE MENU MOBILE ====================
 const navLink = document.querySelectorAll(".nav_link");
 
@@ -104,38 +121,39 @@ tabs.forEach((tab) => {
   });
 });
 
-// ============================= SEVICES MODAL =========================== 
-const modalViews = document.querySelectorAll('.services_modal')
-const modalBtns = document.querySelectorAll('.services_button')
-const modalCloses = document.querySelectorAll('.services_modal-close')
-
+// ============================= SEVICES MODAL ===========================
+const modalViews = document.querySelectorAll(".services_modal");
+const modalBtns = document.querySelectorAll(".services_button");
+const modalCloses = document.querySelectorAll(".services_modal-close");
 
 // nhận giá trị index từ dưới, thêm class active-modal
 // madalClick = index của cái nut đó
 
-let modal = function(modalClick){
-  console.log("modalClick 2")
+let modal = function (modalClick) {
+  console.log("modalClick 2");
 
-  
-  modalViews[modalClick].classList.add('modal-active')
-  console.log("🚀~ modalViews[modalClick].classList", modalViews[modalClick].classList)
+  modalViews[modalClick].classList.add("modal-active");
+  console.log(
+    "🚀~ modalViews[modalClick].classList",
+    modalViews[modalClick].classList
+  );
 
   // them event remove vào nut close modal
-  modalCloses[modalClick].addEventListener('click',() =>{
-    modalViews[modalClick].classList.remove('modal-active')
-  })
-}
+  modalCloses[modalClick].addEventListener("click", () => {
+    modalViews[modalClick].classList.remove("modal-active");
+  });
+};
 
 //  chạy qua các nút viewMore
 modalBtns.forEach((modalBtn, i) => {
-  console.log('modalBtn: ', modalBtn.classList)
+  console.log("modalBtn: ", modalBtn.classList);
 
-  // thêm event click vào nút viewMore qua index 
-  modalBtn.addEventListener('click', () => {
-    console.log("modalClick 1")
-    modal(i)
-  })
-})
+  // thêm event click vào nút viewMore qua index
+  modalBtn.addEventListener("click", () => {
+    console.log("modalClick 1");
+    modal(i);
+  });
+});
 
 // =================== PORTFOLIO ================
 let swiper = new Swiper(".mySwiper", {
@@ -151,6 +169,17 @@ let swiper = new Swiper(".mySwiper", {
   keyboard: true,
 });
 
+// ==================== show scroll up ================= 
+function scrollTop(){
+  const scrollTop = document.getElementById('scroll-top')
 
+  if(this.scrollY >= 560) {
+    scrollTop.classList.add('scroll_show');
+  }
 
+  else {
+    scrollTop.classList.remove('scroll_show')
+  }
+}
 
+window.addEventListener('scroll', scrollTop)
