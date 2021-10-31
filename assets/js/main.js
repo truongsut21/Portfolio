@@ -183,3 +183,40 @@ function scrollTop(){
 }
 
 window.addEventListener('scroll', scrollTop)
+
+
+// ================ Butoon dark / night ==================
+let activeDark = false
+
+buttonTheme = document.getElementById('theme-button')
+document.addEventListener('click', () =>{
+  activeDark = !activeDark
+
+  if(activeDark){
+    document.body.classList.add('dark-theme')
+    buttonTheme.classList.remove('fa-moon')
+    buttonTheme.classList.add('fa-lightbulb')
+  }
+
+  else {
+    document.body.classList.remove('dark-theme')
+    buttonTheme.classList.add('fa-moon')
+    buttonTheme.classList.remove('fa-lightbulb')
+  }
+})
+
+if (activeDark) {
+  document.body.classList.add('dark-theme')
+}
+
+// hiden menu
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+    iconToggle = document.getElementById("nav-toggle");
+
+    // hiden
+    iconToggle.classList.remove("hiden-icon-toggle");
+    iconToggle.classList.add("show-menu");
+  });
+}

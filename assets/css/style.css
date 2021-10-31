@@ -67,7 +67,7 @@
 }
 /* ================ DARK THEME =================  */
 body.dark-theme{
- 
+  transition: .7s;
   --fist-color-second: hsl(var(--hue-color), 30%, 8%);
  
  
@@ -115,6 +115,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  transition: .7s;
 }
 
 /* set chieu cao va do rong cua chu  */
