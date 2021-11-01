@@ -996,4 +996,35 @@ padding: 2rem 0 3rem;
   bottom: 5rem;
 }
 
-/* 1:26  */
+/* ============================ MEDIA MEDIUM ======================  */
+@media screen and (min-width: 770px){
+  .home_content{
+   grid-template-columns: max-content 1fr 1fr;
+  }
+  .home_data{
+    grid-column: initial;
+  }
+
+  .home_data a{
+    margin: auto;
+  }
+  .home_img{
+    justify-self: center;
+  }
+  .home_img img{
+    height: 90%;
+    width: 90%;
+  }
+
+  .about_container{
+    grid-template-columns: 1fr 1fr !important;
+    /* background-color: khaki; */
+  }
+
+  .about_buttons{
+    justify-self: center;
+  }
+  
+}
+
+/* 2:35  */
