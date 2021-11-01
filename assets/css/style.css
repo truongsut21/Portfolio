@@ -17,6 +17,7 @@
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 97%);
+  --backgroud-modal: hsl(var(--hue-color), 50%, 95%);
 
   --container-color: #fff;
 
@@ -76,6 +77,7 @@ body.dark-theme{
  
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 28%, 12%);
+  --backgroud-modal: hsl(var(--hue-color),10%, 20%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
 }
 /* =================== button dark night ============= */
@@ -212,6 +214,9 @@ img {
 
 .nav_logo:hover {
   color: var(--fist-color);
+}
+.info_modal-title{
+  color: rgb(48, 47, 47);
 }
 
 /* set nav cho man hinh nho  */
@@ -691,15 +696,6 @@ img {
 }
 
 /* ================================ SERVICES ====================  */
-/* .services_button{
-  border-radius:0;
-  background: none;
-  color: var(--title-color);
-  display: inline;
-  padding: 0;
-  box-shadow: none;
-} */
-
 .services_container {
   gap: 1.5rem;
 
@@ -764,7 +760,7 @@ img {
 
 .services_modal-content {
   position: relative;
-  background-color: rgb(254, 254, 255);
+  background-color: var(--backgroud-modal);
   padding: 1.5rem;
   border-radius: 0.5rem;
 }

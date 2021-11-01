@@ -121,7 +121,7 @@ tabs.forEach((tab) => {
   });
 });
 
-// ============================= SEVICES MODAL ===========================
+// ============================= SEVICES MODAL (icon zalo sua dung chung) ===========================
 const modalViews = document.querySelectorAll(".services_modal");
 const modalBtns = document.querySelectorAll(".services_button");
 const modalCloses = document.querySelectorAll(".services_modal-close");
@@ -189,7 +189,7 @@ window.addEventListener('scroll', scrollTop)
 let activeDark = false
 
 buttonTheme = document.getElementById('theme-button')
-document.addEventListener('click', () =>{
+buttonTheme.addEventListener('click', () =>{
   activeDark = !activeDark
 
   if(activeDark){
