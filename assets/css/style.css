@@ -596,15 +596,24 @@ img {
   width: 90%;
 }
 
+.skills_list{
+  transition: .5s;
+}
+
 .skills_close .skills_list {
-  transition: 0.5s;
   height: 0;
 
   /* Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi. */
   overflow: hidden;
 }
 
+.skills_open, .skills_close{
+
+  transition: .3s;
+}
+
 .skills_open .skills_list {
+  transition: .5s;
   height: max-content;
   margin-bottom: var(--mb-2-5);
 }
@@ -820,10 +829,11 @@ img {
 }
 
 .portfolio_data {
-  justify-self: center;
+  /* text-align: justify; */
   /* background-color: rosybrown; */
-  margin-left: 1rem;
-  margin-bottom: 2rem;
+  margin: 0 2.5rem 2rem;
+  /* margin-left: 1rem;
+  margin-bottom: 2rem; */
 }
 .portfolio_description {
   margin-bottom: var(--mb-0-75);
@@ -1016,7 +1026,11 @@ padding: 2rem 0 3rem;
     width: 90%;
   }
 
-  .about_container{
+  .about_container,
+  .skills_container,
+  .portfolio_content,
+  .services_container
+  {
     grid-template-columns: 1fr 1fr !important;
     /* background-color: khaki; */
   }
@@ -1024,6 +1038,16 @@ padding: 2rem 0 3rem;
   .about_buttons{
     justify-self: center;
   }
+
+  .qualification_sections{
+    display: grid;
+    grid-template-columns: .6fr;
+    justify-content: center;
+  }
+  .portfolio_title{
+    margin-top: 0 !important;
+  }
+
   
 }
 
