@@ -1169,9 +1169,9 @@ padding: 2rem 0 3rem;
     border-radius: 0;
   }
 
-  .home_social{
+  /* .home_social{
     transform: translateX(-5rem);
-  }
+  } */
 
 .services_container{
   grid-template-columns: repeat(3, 238px);
