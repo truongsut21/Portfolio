@@ -962,13 +962,13 @@ padding: 2rem 0 3rem;
 }
 
 .footer_socials{
-  display: flex;
+  /* display: flex; */
   /* căn đều các phần tử  */
-  justify-content: center;
+  /* justify-content: center; */
 }
 .footer_social{
   font-size: 1.25rem;
-  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
   
 }
 
@@ -1082,6 +1082,7 @@ padding: 2rem 0 3rem;
   .header{
     top: 0;
     bottom: initial;
+    border-radius: 0;
 
   }
 
@@ -1151,6 +1152,55 @@ padding: 2rem 0 3rem;
   .services_content{
     padding: 6rem 0 2rem 2.5rem;
   }
+}
+
+
+/* ------------ large display  */
+
+@media screen and (min-width: 1024px) {
+  .header,
+  .main,
+  .footer,
+  .footer_container{
+    padding: 0;
+  }
+
+  .header{
+    border-radius: 0;
+  }
+
+  .home_social{
+    transform: translateX(-5rem);
+  }
+
+.services_container{
+  grid-template-columns: repeat(3, 238px);
+}
+
+.protfolio_content{
+  column-gap: 5rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+  font-size: 3rem;
+}
+
+.swiper-button-prev{
+  left: -3.5rem;
+}
+
+.swiper-button-next{
+  right: -3.5rem;
+}
+
+.contact_form{
+  width: 460px;
+}
+
+.contact_inputs{
+  grid-template-columns: repeat(2, 1fr);
+}
 }
 
 /* 2:35  */
