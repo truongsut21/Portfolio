@@ -1,0 +1,11 @@
+Control panel username:	freev_30321575
+Control panel password:	**********
+Control panel URL:	cpanel.freevnn.com
+MySQL username	freev_30321575
+MySQL password:	607710
+MySQL hostname:	sql108.freevnn.com
+FTP username:	freev_30321575
+FTP password:	607710
+FTP host name:	ftp.freevnn.com
+Your Website URL:	http://dotruongcv.freevnn.com
+ 	 
