@@ -31,7 +31,7 @@ if (navClose) {
 const imgZalo = document.getElementById("zalo_close");
 const iconZalo = document.getElementById("iconZalo");
 const infoClose = document.getElementById("info_modal");
-const footer_zalo = document.getElementById("footer_zalo")
+const footer_zalo = document.getElementById("footer_zalo");
 // ------ show zalo -----------
 // iconZalo.addEventListener("click", () => {
 //   infoClose.classList.add("modal-active");
@@ -49,10 +49,8 @@ const navLink = document.querySelectorAll(".nav_link");
 
 function linkAction() {
   const navMenu = document.getElementById("nav-menu");
-  console.log(navMenu);
 
   navMenu.classList.remove("show-menu");
-  console.log("enent click");
 }
 
 // them cac event vào navLink
@@ -93,10 +91,8 @@ skillsHeader.forEach(function (el) {
 
 // =============================== QUALIFICATION TABS =================
 const tabs = document.querySelectorAll("[data-target]");
-console.log("🚀 ~tabs", tabs);
 
 const tabContents = document.querySelectorAll("[data-content]");
-console.log("🚀 ~tabContents", tabContents);
 
 tabs.forEach((tab) => {
   // them event vào tab
@@ -104,11 +100,7 @@ tabs.forEach((tab) => {
     // lấy target tên 'data-target'
     const target = document.querySelector(tab.dataset.target);
 
-    console.log("🚀 ~tab.dataset.target", tab.dataset.target);
-
-    console.log("🚀~ tabContents", tabContents);
     tabContents.forEach((tabContent) => {
-      console.log("🚀~ tabContent", tabContent);
       tabContent.classList.remove("qualification_active");
     });
 
@@ -130,13 +122,7 @@ const modalCloses = document.querySelectorAll(".services_modal-close");
 // madalClick = index của cái nut đó
 
 let modal = function (modalClick) {
-  console.log("modalClick 2");
-
   modalViews[modalClick].classList.add("modal-active");
-  console.log(
-    "🚀~ modalViews[modalClick].classList",
-    modalViews[modalClick].classList
-  );
 
   // them event remove vào nut close modal
   modalCloses[modalClick].addEventListener("click", () => {
@@ -146,11 +132,8 @@ let modal = function (modalClick) {
 
 //  chạy qua các nút viewMore
 modalBtns.forEach((modalBtn, i) => {
-  console.log("modalBtn: ", modalBtn.classList);
-
   // thêm event click vào nút viewMore qua index
   modalBtn.addEventListener("click", () => {
-    console.log("modalClick 1");
     modal(i);
   });
 });
@@ -169,44 +152,39 @@ let swiper = new Swiper(".mySwiper", {
   keyboard: true,
 });
 
-// ==================== show scroll up ================= 
-function scrollTop(){
-  const scrollTop = document.getElementById('scroll-top')
+// ==================== show scroll up =================
+function scrollTop() {
+  const scrollTop = document.getElementById("scroll-top");
 
-  if(this.scrollY >= 560) {
-    scrollTop.classList.add('scroll_show');
-  }
-
-  else {
-    scrollTop.classList.remove('scroll_show')
+  if (this.scrollY >= 560) {
+    scrollTop.classList.add("scroll_show");
+  } else {
+    scrollTop.classList.remove("scroll_show");
   }
 }
 
-window.addEventListener('scroll', scrollTop)
-
+window.addEventListener("scroll", scrollTop);
 
 // ================ Butoon dark / night ==================
-let activeDark = false
+let activeDark = false;
 
-buttonTheme = document.getElementById('theme-button')
-buttonTheme.addEventListener('click', () =>{
-  activeDark = !activeDark
+buttonTheme = document.getElementById("theme-button");
+buttonTheme.addEventListener("click", () => {
+  activeDark = !activeDark;
 
-  if(activeDark){
-    document.body.classList.add('dark-theme')
-    buttonTheme.classList.remove('fa-moon')
-    buttonTheme.classList.add('fa-lightbulb')
+  if (activeDark) {
+    document.body.classList.add("dark-theme");
+    buttonTheme.classList.remove("fa-moon");
+    buttonTheme.classList.add("fa-lightbulb");
+  } else {
+    document.body.classList.remove("dark-theme");
+    buttonTheme.classList.add("fa-moon");
+    buttonTheme.classList.remove("fa-lightbulb");
   }
-
-  else {
-    document.body.classList.remove('dark-theme')
-    buttonTheme.classList.add('fa-moon')
-    buttonTheme.classList.remove('fa-lightbulb')
-  }
-})
+});
 
 if (activeDark) {
-  document.body.classList.add('dark-theme')
+  document.body.classList.add("dark-theme");
 }
 
 // hiden menu
