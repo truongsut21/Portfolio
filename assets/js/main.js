@@ -156,7 +156,7 @@ let swiper = new Swiper(".mySwiper", {
 function scrollTop() {
   const scrollTop = document.getElementById("scroll-top");
 
-  if (this.scrollY >= 560) {
+  if (this.scrollY >= 200) {
     scrollTop.classList.add("scroll_show");
   } else {
     scrollTop.classList.remove("scroll_show");

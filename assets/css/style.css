@@ -7,7 +7,7 @@
   --header-height: 3rem;
 
   /* color mod  */
-  --hue-color: 250;
+  --hue-color: 187;
   --fist-color: hsl(var(--hue-color), 69%, 61%);
   --fist-color-second: hsl(var(--hue-color), 69%, 61%);
   --fist-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -308,7 +308,7 @@ img {
 }
 
 .home_img img {
-  background-image: linear-gradient(rgb(215, 143, 233), rgb(36, 56, 94));
+  background-image: linear-gradient(#53c7c9, #479B9D);
   height: 200px;
   border-radius: 55% 45% 52% 48% / 50% 17% 83% 50%;
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(83, 83, 83, 0.411);
@@ -368,6 +368,7 @@ img {
 
 .home_description {
   margin-bottom: var(--mb-2);
+  text-align: justify;
 }
 
 .home_scroll {
@@ -404,7 +405,7 @@ img {
 /* =============================== BUTTONS ===========================  */
 .button {
   display: inline-block;
-  background-image: linear-gradient(rgb(236, 206, 255), var(--fist-color));
+  background-image: linear-gradient(rgb(218, 186, 238), var(--fist-color));
   color: rgb(241, 241, 241);
   padding: 1rem;
   border-radius: 23% 77% 30% 70% / 48% 35% 65% 52%;
@@ -433,7 +434,7 @@ img {
 }
 
 .button--link:hover {
-  color: rgb(115, 4, 206);
+  color: #53c7c9;
   font-weight: var(--font-semi-bold);
 }
 .button:hover {
@@ -460,15 +461,37 @@ img {
   align-self: center;
 }
 
+.about_container{
+  width: 100%;
+}
+
+.about_table{
+  width: 125px;
+  line-height: 30px;
+}
+
+.about_th{
+  line-height: 40px;
+}
 .about_description {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  text-align: left;
+  width: 125%;
   margin-bottom: var(--mb-2-5);
 }
 
+
 .about_info {
   display: flex;
+  width: 100%;
+  text-align: left;
   /* căn đều giữa cac title  */
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 
   margin-bottom: var(--mb-2-5);
 }
@@ -505,6 +528,10 @@ img {
   align-items: center;
   margin-bottom: var(--mb-2-5);
   cursor: pointer;
+}
+
+.skills_number{
+  padding-top: 30px;
 }
 
 .skills_icon,
@@ -559,48 +586,36 @@ img {
   background-color: var(--fist-color);
 }
 /* ------------- BAR SKILL -------------------------------  */
+.skills_com,
 .skills_html {
-  width: 90%;
+  width: 80%;
 }
 
+.skills_eng{
+  width: 50%;
+}
+
+.skills_pre{
+  width: 60%;
+}
 .skills_css {
-  width: 90%;
+  width: 80%;
 }
 
 .skills_js {
-  width: 90%;
-}
-
-.skills_ang {
-  width: 90%;
+  width: 80%;
 }
 
 .skills_php {
-  width: 90%;
-}
-
-.skills_node {
-  width: 90%;
+  width: 80%;
 }
 
 .skills_sql {
-  width: 90%;
+  width: 80%;
 }
 
 .skills_py {
-  width: 90%;
-}
-
-.skills_figma {
-  width: 90%;
-}
-
-.skills_sketch {
-  width: 90%;
-}
-
-.skills_pts {
-  width: 90%;
+  width: 80%;
 }
 
 .skills_list{
@@ -922,6 +937,7 @@ img {
 
 .contact_button{
   border-radius: .5rem;
+  border: none;
 }
 
 
@@ -936,7 +952,7 @@ img {
 }
 
 .footer_bg{
-  background-image: linear-gradient(hsla(250, 45%, 47%, 0.616), hsla(250, 75%, 65%, 0.973));
+  background-image: linear-gradient(#53c7c9, #479B9D);
   padding: 0rem 0 3rem;
 }
 
@@ -954,18 +970,14 @@ img {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
-  
+  padding-top: 20px;
 }
 
 .footer_link:hover{
   color: var(--fist-color-lighter);
 }
 
-.footer_socials{
-  /* display: flex; */
-  /* căn đều các phần tử  */
-  /* justify-content: center; */
-}
+
 .footer_social{
   font-size: 1.25rem;
   margin-right: var(--mb-1-5);
@@ -1073,6 +1085,11 @@ img {
   .section{
     padding: 6rem 0 2rem;
 
+  }
+
+  .section_sk{
+    margin: auto;
+    width: 30%;
   }
 
   .section_subtitle{
